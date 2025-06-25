@@ -48,7 +48,7 @@ say('Furina', {
   colors: ['cyanBright']
 })
 
-say(`Developed By • The-King-Destroy`, {
+say(`Developed By • Neykoor`, {
 font: 'console',
 align: 'center',
 colors: ['blueBright']
