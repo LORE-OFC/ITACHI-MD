@@ -123,7 +123,7 @@ npm start
 
 ---
 
-### **`❀ Colaboradores
+### **`❀ Colaboradores`**
 
 <a href="https://github.com/https0J" style="display:inline-block; margin-right: 10px; text-decoration: none;"><img src="https://github.com/https0J.png" width="130" height="130" alt="https" style="border-radius: 50%;"/>
 </a>
