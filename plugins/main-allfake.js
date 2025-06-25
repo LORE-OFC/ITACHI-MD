@@ -29,15 +29,15 @@ console.log(`Error : ${e}`)
   
 global.creador = 'wa.me/5212202410659'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
-global.namechannel = '=͟͟͞❀ 𝐘𝐮𝐤𝐢 𝐒𝐮𝐨𝐮 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ⏤͟͟͞͞★'
-global.namechannel2 = '=͟͟͞❀ 𝐘𝐮𝐤𝐢 𝐒𝐮𝐨𝐮 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ⏤͟͟͞͞★'
-global.namegrupo = 'ᰔᩚ ᥡᥙkі sᥙ᥆ᥙ • ᥆𝖿іᥴіᥲᥣ ❀'
-global.namecomu = 'ᰔᩚ ᥡᥙkіᑲ᥆𝗍-mძ • ᥴ᥆mᥙᥒі𝗍ᥡ ❀'
+global.namechannel = '=͟͟͞❀ Fuerina - channel ⏤͟͟͞͞★'
+global.namechannel2 = '=͟͟͞❀ Furina  - channel ⏤͟͟͞͞★'
+global.namegrupo = 'ᰔᩚ Furina • ᥆𝖿іᥴіᥲᥣ ❀'
+global.namecomu = 'ᰔᩚ Furina • ᥴ᥆mᥙᥒі𝗍ᥡ ❀'
 global.listo = '❀ *Aquí tienes ฅ^•ﻌ•^ฅ*'
 global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745522645448.jpeg')
 
-global.canalIdM = ["120363416409380841@newsletter", "120363416409380841@newsletter"]
-global.canalNombreM = ["ᰔᩚ ᥡᥙkіᑲ᥆𝗍-mძ • ᥙ⍴ძᥲ𝗍ᥱs ❀", "ᰔᩚ ᥡᥙkіᑲ᥆𝗍-mძ • ᥲ᥎іs᥆s ❀"]
+global.canalIdM = ["120363392571425662@newsletter", "120363392571425662@newsletter"]
+global.canalNombreM = ["ᰔᩚ Furina-mძ • ᥙ⍴ძᥲ𝗍ᥱs ❀", "ᰔᩚ Furina-mძ • ᥲ᥎іs᥆s ❀"]
 global.channelRD = await getRandomChannel()
 
 global.d = new Date(new Date + 3600000)
