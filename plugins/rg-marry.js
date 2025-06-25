@@ -191,7 +191,8 @@ let handler = async (m, { conn, command, usedPrefix, args }) => {
 
     await conn.reply(
       m.chat,
-      `♡ @${targetId.split('@')[0]}, @${senderId.split('@')[0]} te ha propuesto matrimonio, ¿aceptas?\n> ✐ Aceptar » ${usedPrefix + command} @${senderId.split('@')[0]}`,
+      `♡ @${targetId.split('@')[0]}, @${senderId.split('@')[0]} te ha propuesto matrimonio, ¿aceptas?\n> ✐ Aceptar » ${usedPrefix + command} @${senderId.split('@')[0]}`
+La propuesta se cancelara automáticamente en 2 minutos,
       m,
       { mentions: [senderId, targetId] }
     );
