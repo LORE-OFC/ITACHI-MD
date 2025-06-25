@@ -1,35 +1,49 @@
-import ws from 'ws'
+import ws from 'ws';
 
-let handler = m => m
+let handler = m => m;
 
-handler.before = async function (m, { conn }) {
-  if (!m.isGroup) return
+handler.before = async function (m, { conn, isAdmin, isBotAdmin }) {
+  if (!m.isGroup) return;
 
-  const chat = global.db.data.chats[m.chat] || {}
-  const primaryBot = chat.primary_bot
-  if (!primaryBot) return  // si no hay bot primario configurado, todos responden
+  const thisBotJid = conn.user?.jid || this.user?.jid;
+  const mainBotJid = global.conn?.user?.jid;
 
-  // Sub-bots conectados
-  const activeBots = global.conns.filter(c => c.user && c.ws && c.ws.readyState === ws.OPEN)
+  if (!mainBotJid) return;
 
-  // Participantes del grupo
-  const participants = await conn.groupMetadata(m.chat)
-    .then(res => res.participants || [])
-    .catch(() => [])
+  const chat = global.db.data.chats[m.chat] || {};
+  const primaryBotJid = chat.primary_bot;
 
-  const isPrimaryConnected = activeBots.some(c => c.user.jid === primaryBot)
-  const isPrimaryInGroup = participants.some(p => p.id === primaryBot)
+  let designatedResponder;
 
-  const thisBotJid = conn.user?.jid || this.user?.jid
-  const mainBotJid = global.conn?.user?.jid
+  if (primaryBotJid) {
+    const activeConns = global.conns.filter(c => c.user && c.ws && c.ws.readyState === ws.OPEN);
+    const isPrimaryConnected = activeConns.some(c => c.user.jid === primaryBotJid);
+    
+    let isPrimaryInGroup = false;
+    if (isPrimaryConnected) {
+      try {
+        const participants = await conn.groupMetadata(m.chat).then(res => res.participants);
+        isPrimaryInGroup = participants.some(p => p.id === primaryBotJid);
+      } catch (e) {
+        console.error(`[Primary Bot Check] Error al verificar metadata del grupo:`, e);
+        isPrimaryInGroup = false;
+      }
+    }
 
-  // SI el bot primario está conectado y en el grupo → SOLO él responde
-  if (isPrimaryConnected && isPrimaryInGroup) {
-    if (thisBotJid !== primaryBot) throw !1
+    if (isPrimaryConnected && isPrimaryInGroup) {
+      designatedResponder = primaryBotJid;
+    } else {
+      designatedResponder = mainBotJid;
+    }
   } else {
-    // Si el primario NO está disponible → SOLO el main responde
-    if (thisBotJid !== mainBotJid) throw !1
+    designatedResponder = mainBotJid;
   }
-}
 
-export default handler
+  if (thisBotJid !== designatedResponder) {
+    throw false;
+  }
+
+  return true;
+};
+
+export default handler;
