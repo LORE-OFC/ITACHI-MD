@@ -244,8 +244,6 @@ Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
 > ✦ Calcular todo tipo de ecuaciones.
 ᰔᩚ *#tiempo • #clima*
 > ✦ Ver el clima de un pais.
-ᰔᩚ *#horario*
-> ✦ Ver el horario global de los países.
 ᰔᩚ *#fake • #fakereply*
 > ✦ Crea un mensaje falso de un usuario.
 ᰔᩚ *#enhance • #remini • #hd*
