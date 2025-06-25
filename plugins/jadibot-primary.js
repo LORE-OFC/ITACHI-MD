@@ -1,36 +1,47 @@
-import ws from 'ws';
+// handler.js — ES Modules
 
-let handler = async (m, { conn, usedPrefix, args }) => {
-if (!args[0]) return m.reply(await tr(`⚠️ Etiquetas en numero de algun bot\nEjemplo: ${usedPrefix}setprimary @tag`));
+import { re } from 're'
 
-const users = [...new Set([...global.conns.filter((conn) => conn.user && conn.ws.socket && conn.ws.socket.readyState !== ws.CLOSED).map((conn) => conn)])];
-let botJid;
-let selectedBot;
+const handler = async (m, { conn, args, usedPrefix }) => {
+  if (!args[0] && !m.mentionedJid?.length)
+    return m.reply(`⚠️ Etiqueta o escribe el número del bot que quieres establecer como principal.\n\nEjemplo: *${usedPrefix}setprimary @bot*`)
 
-if (m.mentionedJid && m.mentionedJid.length > 0) {
-botJid = m.mentionedJid[0];
-if (botJid === conn.user.jid || global.conn.user.jid) {
-selectedBot = conn;
-} else {
-selectedBot = users.find(conn => conn.user.jid === botJid);
-}} 
-else {
-botJid = args[0].replace(/[^0-9]/g, '') + '@s.whatsapp.net';
-if (botJid === conn.user.jid) {
-selectedBot = conn;
-} else {
-selectedBot = users.find(conn => conn.user.jid === botJid);
-}}
+  // Filtra las conexiones activas
+  const activeConns = global.conns.filter(c => c.user && c.ws && c.ws.readyState === 1)
 
-if (!selectedBot) return m.reply(await tr("⚠️ No se encontró un bot conectado con esa mención o número. Usa /listjadibot para ver los bots disponibles."));
-let chat = global.db.data.chats[m.chat];
-chat.primaryBot = botJid;
-conn.sendMessage(m.chat, { text: `✅ El bot @${botJid.split('@')[0]} ${await tr("ha sido establecido como primario en este grupo. Los demás bots no responderán aquí.")}`, mentions: [botJid] }, { quoted: m });
-};
-handler.help = ['setprimary <@tag>'];
-handler.tags = ['jadibot'];
-handler.command = ['setprimary'];
-handler.group = true;
-handler.register = true;
+  let botJid
+  let selectedBot
 
-export default handler;
+  if (m.mentionedJid?.length) {
+    botJid = m.mentionedJid[0]
+    selectedBot = botJid === conn.user.jid ? conn : activeConns.find(c => c.user?.jid === botJid)
+  } else {
+    const number = args[0].replace(/\D/g, '')
+    botJid = number + '@s.whatsapp.net'
+    selectedBot = botJid === conn.user.jid ? conn : activeConns.find(c => c.user?.jid === botJid)
+  }
+
+  if (!selectedBot) {
+    return m.reply('⚠️ No se encontró un bot conectado con esa mención o número. Usa *.listjadibot* para ver los disponibles.')
+  }
+
+  // Guarda en la db que ese es el bot primario del grupo
+  if (!db.data.chats[m.chat]) db.data.chats[m.chat] = {}
+  db.data.chats[m.chat].primary_bot = botJid
+
+  const userTag = '@' + botJid.split('@')[0]
+  const text = `✅ El bot ${userTag} ha sido establecido como *bot primario* en este grupo.\nLos demás bots ignorarán los comandos aquí.`
+
+  await conn.sendMessage(m.chat, {
+    text,
+    mentions: [botJid],
+  }, { quoted: m })
+}
+
+handler.help = ['setprimary <@bot|número>']
+handler.tags = ['jadibot']
+handler.command = ['setprimary']
+handler.group = true
+handler.register = true
+
+export default handler
