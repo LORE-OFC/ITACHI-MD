@@ -33,6 +33,11 @@
 
 </details>
 
+
+<div align="center">
+  <img src="https://profile-counter.glitch.me/Aqua200/count.svg" />
+  <p>👁️ Visitantes del Repositorio 👁️</p>
+</div>
 ---
 
 ### **`✧ Click en la imagen para descargar termux ✧`**
