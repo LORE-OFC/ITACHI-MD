@@ -240,8 +240,6 @@ Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
 •:･ﾟ⊹˚• \`『 Herramientas 』\` •˚⊹:･ﾟ•
 
 ❍ Comandos de herramientas con muchas funciones.
-ᰔᩚ *#calcular • #calcular • #cal*
-> ✦ Calcular todo tipo de ecuaciones.
 ᰔᩚ *#fake • #fakereply*
 > ✦ Crea un mensaje falso de un usuario.
 ᰔᩚ *#enhance • #remini • #hd*
