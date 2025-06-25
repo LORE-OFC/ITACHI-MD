@@ -242,8 +242,6 @@ Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
 ❍ Comandos de herramientas con muchas funciones.
 ᰔᩚ *#calcular • #calcular • #cal*
 > ✦ Calcular todo tipo de ecuaciones.
-ᰔᩚ *#tiempo • #clima*
-> ✦ Ver el clima de un pais.
 ᰔᩚ *#fake • #fakereply*
 > ✦ Crea un mensaje falso de un usuario.
 ᰔᩚ *#enhance • #remini • #hd*
