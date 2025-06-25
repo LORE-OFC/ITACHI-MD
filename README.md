@@ -117,7 +117,7 @@ npm start
 <summary><b> ✰ Contáctos</b></summary>
 
 * WhatsApp: [`Aquí`](https://wa.me/5216631079388)
-* Correo: [`Aquí`](chinquepapa@gmai.com)
+
 
 </details>
 
