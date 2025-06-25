@@ -1,16 +1,10 @@
-// handler.js — ES Modules
-
-import { re } from 're'
-
 const handler = async (m, { conn, args, usedPrefix }) => {
   if (!args[0] && !m.mentionedJid?.length)
     return m.reply(`⚠️ Etiqueta o escribe el número del bot que quieres establecer como principal.\n\nEjemplo: *${usedPrefix}setprimary @bot*`)
 
-  // Filtra las conexiones activas
   const activeConns = global.conns.filter(c => c.user && c.ws && c.ws.readyState === 1)
 
-  let botJid
-  let selectedBot
+  let botJid, selectedBot
 
   if (m.mentionedJid?.length) {
     botJid = m.mentionedJid[0]
@@ -21,12 +15,10 @@ const handler = async (m, { conn, args, usedPrefix }) => {
     selectedBot = botJid === conn.user.jid ? conn : activeConns.find(c => c.user?.jid === botJid)
   }
 
-  if (!selectedBot) {
+  if (!selectedBot)
     return m.reply('⚠️ No se encontró un bot conectado con esa mención o número. Usa *.listjadibot* para ver los disponibles.')
-  }
 
-  // Guarda en la db que ese es el bot primario del grupo
-  if (!db.data.chats[m.chat]) db.data.chats[m.chat] = {}
+  db.data.chats[m.chat] ??= {}
   db.data.chats[m.chat].primary_bot = botJid
 
   const userTag = '@' + botJid.split('@')[0]
@@ -34,7 +26,7 @@ const handler = async (m, { conn, args, usedPrefix }) => {
 
   await conn.sendMessage(m.chat, {
     text,
-    mentions: [botJid],
+    mentions: [botJid]
   }, { quoted: m })
 }
 
