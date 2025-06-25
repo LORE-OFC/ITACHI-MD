@@ -34,10 +34,10 @@ function isSpecificBotInstance() {
   try {
     const packageJsonContent = fs.readFileSync("./package.json", "utf-8");
     const packageInfo = JSON.parse(packageJsonContent);
-    if (packageInfo.name !== "Destiny-Bot") {
+    if (packageInfo.name !== "Furina") {
       return false;
     }
-    if (packageInfo.repository.url !== "git+https://github.com/https0J/Destiny-Bot.git") {
+    if (packageInfo.repository.url !== "git+https://github.com/Aqua200/Furina.git") {
       return false;
     }
     return true;
