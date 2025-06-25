@@ -125,12 +125,12 @@ npm start
 
 ### **`ᥫ᭡ Propietario`**
 <a
-href="https://github.com/The-King-Destroy"><img src="https://github.com/The-King-Destroy.png" width="130" height="130" alt="
-ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜"/></a>
+href="https://github.com/Aqua200"><img src="https://github.com/Aqua200.png" width="130" height="130" alt="
+Neykoor ofc"/></a>
 
 ### **`🜸 Créditos`**
 
 <a href="https://github.com/BrunoSobrino" style="display:inline-block; margin-right: 10px; text-decoration: none;"><img src="https://github.com/BrunoSobrino.png" width="130" height="130" alt="Bruno Ofc" style="border-radius: 50%;"/>
 </a>
-<a href="https://github.com/The-King-Destroy" style="display:inline-block; margin-right: 10px; text-decoration: none;"><img src="https://github.com/The-King-Destroy.png" width="130" height="130" alt="Bruno Ofc" style="border-radius: 50%;"/>
+<a href="https://github.com/The-King-Destroy" style="display:inline-block; margin-right: 10px; text-decoration: none;"><img src="https://github.com/The-King-Destroy.png" width="130" height="130" alt="ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜" style="border-radius: 50%;"/>
 </a>
