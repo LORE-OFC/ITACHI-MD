@@ -17,22 +17,21 @@ global.botNumber = '' //Ejemplo: 573218138672
 
 global.owner = [
 // <-- Número @s.whatsapp.net -->
-  ['5212202410659', '🜲 Propietario 🜲', true],
-  ['5492916450307'],
-  ['5219541690054'],
-  ['5214811527445'], 
-  ['5216671548329'],
+  ['5216631079388', '🜲 Propietario 🜲', true],
+  ['5212202410659'],
+  ['573154062343'],
+  ['573214401313'], 
+  [''],
   
 // <-- Número @lid -->
   ['117094280605916', 'Destroy', true],
-  ['258892692984006', 'DevAlexJs', true], 
-  ['58566677377081', 'Legna', true]
+  ['5216631079388', 'Neykoor', true]
 ];
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.mods = []
-global.suittag = ['5212202410659'] 
+global.suittag = [] 
 global.prems = []
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -40,21 +39,21 @@ global.prems = []
 global.libreria = 'Baileys'
 global.baileys = 'V 6.7.17' 
 global.vs = '2.2.5'
-global.nameqr = 'YukiBot-MD'
-global.namebot = '✿◟Yυƙι-Sυσυ-Bσƚ◞✿'
+global.nameqr = 'Furina-MD'
+global.namebot = 'Furina'
 global.sessions = 'Sessions'
 global.jadi = 'JadiBots' 
 global.yukiJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '⪛✰ 𝐘𝐮𝐤𝐢-𝐒𝐮𝐨𝐮-𝐁𝐨𝐭 ✰⪜'
-global.botname = 'ᥡᥙkі sᥙ᥆ᥙ'
-global.wm = '✿◟Yυƙι Sυσυ◞✿'
-global.author = '© mᥲძᥱ ᥕі𝗍һ ᑲᥡ ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜'
-global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜'
-global.textbot = 'Yuki, mᥲძᥱ ᥕі𝗍һ ᑲᥡ ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ'
-global.etiqueta = 'ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜'
+global.packname = '˚୨୧⋆｡Furina˚୨୧⋆｡'
+global.botname = '˚୨୧⋆｡Furina˚୨୧⋆｡'
+global.wm = '⋆｡ Furina ｡⋆'
+global.author = '© 𝚖𝚊𝚍𝚎 𝚠𝚒𝚝𝚑 𝚋𝚢 ⁱᵃᵐ|Neykoor'
+global.dev = '© ⍴᥆ᥕᥱrᥱძ 𝚋𝚢 ⁱᵃᵐ|Neykoor'
+global.textbot = 'Furina, 𝚖𝚊𝚍𝚎 𝚠𝚒𝚝𝚑 𝚋𝚢 ⁱᵃᵐ|Neykoor'
+global.etiqueta = 'ⁱᵃᵐ|Neykoor'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
@@ -66,19 +65,19 @@ global.avatar = 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/ma
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.gp1 = 'https://chat.whatsapp.com/GeMUm4iACPPKRPrKBRKM8c'
-global.comunidad1 = 'https://chat.whatsapp.com/I0dMp2fEle7L6RaWBmwlAa'
-global.channel = 'https://whatsapp.com/channel/0029VbAfPu9BqbrEMFWXKE0d'
-global.channel2 = 'https://whatsapp.com/channel/0029VbAfPu9BqbrEMFWXKE0d'
-global.md = 'https://github.com/The-King-Destroy/Yuki_Suou-Bot'
-global.correo = 'thekingdestroy507@gmail.com'
+global.gp1 = 'https://chat.whatsapp.com/KYe3ATBlpGxAG0n935Dfy9'
+global.comunidad1 = 'https://chat.whatsapp.com/CHXQizfRDItFdWM8F217oB'
+global.channel = 'https://whatsapp.com/channel/0029VbAZ6vWF1YlYsbKCrx1k'
+global.channel2 = 'https://whatsapp.com/channel/0029VazHywx0rGiUAYluYB24'
+global.md = 'https://github.com/Aqua200'
+global.correo = 'chinquepapa@gmail.com'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.catalogo = fs.readFileSync('./src/catalogo.jpg');
 global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: packname, orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 global.ch = {
-ch1: '120363416409380841@newsletter',
+ch1: '120363392571425662@newsletter',
 }
 global.multiplier = 60
 
