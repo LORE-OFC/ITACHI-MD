@@ -41,10 +41,11 @@ let { say } = cfonts
 
 console.log(chalk.bold.redBright(`\n✰ Iniciando Yuki-Suou-Bot ✰\n`))
 
+
 say('Furina', {
-font: 'block',
-align: 'center',
-colors: ['magentaBright']
+  font: 'block',
+  align: 'center',
+  colors: ['cyanBright']
 })
 
 say(`Developed By • The-King-Destroy`, {
