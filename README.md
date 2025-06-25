@@ -1,6 +1,6 @@
 <h1 align="center">✦ Yυƙι Sυσυ ✦</h1>
 
- <img src= "https://files.catbox.moe/1dhtpb.jpeg">
+ <img src= "https://files.catbox.moe/nz5u8e.jpg">
     </p>
 
 ### **`❕️ Información importante`**
