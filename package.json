@@ -1,5 +1,5 @@
 {
-"name": "YukiBot-MD",
+"name": "Furina",
 "version": "2.2.5",
 "description": "WhatsApp Bot Multi Device",
 "main": "index.js",
@@ -18,16 +18,16 @@
 "eslint": "eslint .",
 "eslintfix": "eslint --fix ."
 },
-"homepage": "https://github.com/The-King-Destroy/Yuki_Suou-Bot",
+"homepage": "https://github.com/Aqua200/Furina",
 "author": {
-"name": "The-King-Destroy"
+"name": "neykoor"
 },
 "repository": {
 "type": "git",
-"url": "git+https://github.com/The-King-Destroy/Yuki_Suou-Bot.git"
+"url": "git+https://github.com/Aqua200/Furina.git"
 },
 "bugs": {
-"url": "https://github.com/The-King-Destroy/Yuki_Suou-Bot/issues"
+"url": "https://github.com/Aqua200/Furina/issues"
 },
 "license": "MIT-License",
 "dependencies": {
