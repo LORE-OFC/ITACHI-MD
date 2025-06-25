@@ -1,4 +1,6 @@
-// code created by https_(S2)
+// ❀ Codígo creado por https_(S2) ✧
+//https://github.com/https0J/Shiroko-Bot.git 
+
 import fs from 'fs';
 import path from 'path';
 
@@ -178,7 +180,7 @@ let handler = async (m, { conn, command, usedPrefix, args }) => {
         try {
           await conn.reply(
             m.chat,
-            `✧ La propuesta de matrimonio de @${senderId.split('@')[0]} a @${targetId.split('@')[0]} ha sido cancelada por falta de respuesta en 1 minuto.`,
+            `✧ La propuesta de matrimonio de @${senderId.split('@')[0]} a @${targetId.split('@')[0]} ha sido cancelada por falta de respuesta en 2 minuto.`,
             m,
             { mentions: [senderId, targetId] }
           );
