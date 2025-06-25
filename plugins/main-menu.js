@@ -264,8 +264,6 @@ Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
 > ✦ Repetir un mensaje.
 ᰔᩚ *#todoc • #toducument*
 > ✦ Crea documentos de (audio, imágenes y vídeos).
-ᰔᩚ *#translate • #traducir • #trad*
-> ✦ Traduce palabras en otros idiomas.
 
 • :･ﾟ⊹˚• \`『 Perfil 』\` •˚⊹:･ﾟ•
 
