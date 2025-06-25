@@ -67,7 +67,7 @@ global.avatar = 'https://files.catbox.moe/oly31v.jpeg'
 
 global.gp1 = 'https://chat.whatsapp.com/Gqv0byeAjXiHPL5bX94UGE'
 global.comunidad1 = 'https://chat.whatsapp.com/CHXQizfRDItFdWM8F217oB'
-global.channel = 'https://whatsapp.com/channel/0029VbAZ6vWF1YlYsbKCrx1k'
+global.channel = 'https://whatsapp.com/channel/0029VazHywx0rGiUAYluYB24'
 global.channel2 = 'https://whatsapp.com/channel/0029VazHywx0rGiUAYluYB24'
 global.md = 'https://github.com/Aqua200'
 global.correo = 'chinquepapa@gmail.com'
