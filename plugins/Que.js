@@ -7,24 +7,28 @@ handler.before = async function (m, { conn }) {
 
   const chat = global.db.data.chats[m.chat] || {}
   const primaryBot = chat.primary_bot
-  if (!primaryBot) return
+  if (!primaryBot) return  // si no hay bot primario configurado, todos responden
 
-  // Lista de bots activos (sub-bots)
-  const users = global.conns.filter(c => c.user && c.ws && c.ws.readyState !== ws.CLOSED)
+  // Sub-bots conectados
+  const activeBots = global.conns.filter(c => c.user && c.ws && c.ws.readyState === ws.OPEN)
 
   // Participantes del grupo
   const participants = await conn.groupMetadata(m.chat)
     .then(res => res.participants || [])
     .catch(() => [])
 
-  const isPrimaryConnected = users.some(c => c.user.jid === primaryBot)
+  const isPrimaryConnected = activeBots.some(c => c.user.jid === primaryBot)
   const isPrimaryInGroup = participants.some(p => p.id === primaryBot)
-  const isMainBot = this.user.jid === global.conn.user.jid
 
+  const thisBotJid = conn.user?.jid || this.user?.jid
+  const mainBotJid = global.conn?.user?.jid
+
+  // SI el bot primario está conectado y en el grupo → SOLO él responde
   if (isPrimaryConnected && isPrimaryInGroup) {
-    if (this.user.jid !== primaryBot) throw !1  // no responde si no es el principal
+    if (thisBotJid !== primaryBot) throw !1
   } else {
-    if (!isMainBot) throw !1 // si el principal no está conectado o no está en el grupo, solo el main responde
+    // Si el primario NO está disponible → SOLO el main responde
+    if (thisBotJid !== mainBotJid) throw !1
   }
 }
 
