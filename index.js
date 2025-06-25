@@ -39,7 +39,7 @@ const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 
 let { say } = cfonts
 
-console.log(chalk.bold.redBright(`\n✰ Iniciando Furina ✰\n`))
+console.log(chalk.hex('#8A2BE2').bold(`\n✰ Iniciando Furina ✰\n`))
 
 
 say('Furina', {
