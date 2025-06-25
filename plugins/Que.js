@@ -2,35 +2,34 @@ import ws from 'ws';
 
 let handler = m => m;
 
-handler.before = async function (m, { conn, isAdmin, isBotAdmin }) {
+handler.before = async function (m, { conn }) {
   if (!m.isGroup) return;
 
-  const thisBotJid = conn.user?.jid || this.user?.jid;
+  const thisBotJid = conn.user?.jid;
   const mainBotJid = global.conn?.user?.jid;
 
-  if (!mainBotJid) return;
+  if (!thisBotJid || !mainBotJid) {
+    console.warn(`[Primary Bot] No se pudo identificar thisBotJid (${thisBotJid}) o mainBotJid (${mainBotJid}). Se aborta la lógica.`);
+    return;
+  }
+
+  if (!global.db?.data?.chats) {
+    if (thisBotJid !== mainBotJid) {
+      throw false;
+    }
+    return;
+  }
 
   const chat = global.db.data.chats[m.chat] || {};
   const primaryBotJid = chat.primary_bot;
-
   let designatedResponder;
 
   if (primaryBotJid) {
-    const activeConns = global.conns.filter(c => c.user && c.ws && c.ws.readyState === ws.OPEN);
-    const isPrimaryConnected = activeConns.some(c => c.user.jid === primaryBotJid);
-    
-    let isPrimaryInGroup = false;
-    if (isPrimaryConnected) {
-      try {
-        const participants = await conn.groupMetadata(m.chat).then(res => res.participants);
-        isPrimaryInGroup = participants.some(p => p.id === primaryBotJid);
-      } catch (e) {
-        console.error(`[Primary Bot Check] Error al verificar metadata del grupo:`, e);
-        isPrimaryInGroup = false;
-      }
-    }
+    const activeJadibots = global.conns?.filter(c => c.user && c.ws?.readyState === ws.OPEN) || [];
+    const isPrimaryConnected = activeJadibots.some(c => c.user.jid === primaryBotJid);
+    const isPrimaryTheMainBot = primaryBotJid === mainBotJid;
 
-    if (isPrimaryConnected && isPrimaryInGroup) {
+    if (isPrimaryConnected || isPrimaryTheMainBot) {
       designatedResponder = primaryBotJid;
     } else {
       designatedResponder = mainBotJid;
@@ -43,7 +42,7 @@ handler.before = async function (m, { conn, isAdmin, isBotAdmin }) {
     throw false;
   }
 
-  return true;
+  return;
 };
 
 export default handler;
