@@ -7,10 +7,12 @@ handler.before = async function (m, { conn }) {
 
     const thisBotJid = conn.user?.jid;
     const mainBotJid = global.conn?.user?.jid;
-    if (!thisBotJid || !mainBotJid) return;
+    if (!thisBotJid || !mainBotJid) {
+        console.warn(`[Primary Logic] JID identification failed. Aborting.`);
+        return;
+    }
 
     if (!global.db?.data?.chats) {
-        if (thisBotJid !== mainBotJid) throw false;
         return;
     }
 
@@ -34,11 +36,7 @@ handler.before = async function (m, { conn }) {
         throw false;
 
     } else {
-        if (thisBotJid !== mainBotJid) {
-            throw false;
-        } else {
-            return;
-        }
+        return;
     }
 };
 
