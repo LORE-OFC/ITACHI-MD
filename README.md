@@ -1,6 +1,6 @@
 <h1 align="center">˚୨୧⋆｡Furina˚୨୧⋆｡</h1>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=87CEEB&lines=Bienvenido(a)+a+mi+repositorio;disfruta+de+Furina+dev+Neykoor)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00BFFF&lines=Bienvenido(a)+a+mi+repositorio;disfruta+de+Furina+dev+Neykoor)](https://git.io/typing-svg)
 
  <img src= "https://files.catbox.moe/nz5u8e.jpg">
     </p>
