@@ -9,10 +9,12 @@ handler.before = async function (m, { conn }) {
     const mainBotJid = global.conn?.user?.jid;
     if (!thisBotJid || !mainBotJid) return;
 
-    const chatData = global.db?.data?.chats?.[m.chat] || {};
-    const primaryBotJid = chatData.primary_bot;
+    const chats = global.db?.data?.chats || {};
+    const chat = chats[m.chat];
 
-    if (!primaryBotJid) return;
+    if (!chat || !chat.primary_bot) return;
+
+    const primaryBotJid = chat.primary_bot;
 
     if (thisBotJid === primaryBotJid) return;
 
