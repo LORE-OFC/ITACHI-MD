@@ -7,8 +7,8 @@ handler.before = async function (m, { conn }) {
 
     const thisBotJid = conn.user?.jid;
     const mainBotJid = global.conn?.user?.jid;
-
     if (!thisBotJid || !mainBotJid) return;
+
     if (!global.db?.data?.chats) {
         if (thisBotJid !== mainBotJid) throw false;
         return;
@@ -17,27 +17,28 @@ handler.before = async function (m, { conn }) {
     const chat = global.db.data.chats[m.chat] || {};
     const primaryBotJid = chat.primary_bot;
 
-    let designatedResponder;
-
     if (primaryBotJid) {
-        designatedResponder = primaryBotJid;
-    } else {
-        designatedResponder = mainBotJid;
-    }
+        if (thisBotJid === primaryBotJid) {
+            return;
+        }
 
-    if (thisBotJid === mainBotJid) {
-        if (designatedResponder !== mainBotJid) {
+        if (thisBotJid === mainBotJid) {
             const activeJadibots = global.conns?.filter(c => c.user && c.ws?.readyState === ws.OPEN) || [];
-            const isDesignatedConnected = activeJadibots.some(c => c.user.jid === designatedResponder);
-            
-            if (!isDesignatedConnected) {
-                designatedResponder = mainBotJid;
+            const isPrimaryConnected = activeJadibots.some(c => c.user.jid === primaryBotJid);
+
+            if (!isPrimaryConnected) {
+                return;
             }
         }
-    }
-    
-    if (thisBotJid !== designatedResponder) {
+
         throw false;
+
+    } else {
+        if (thisBotJid !== mainBotJid) {
+            throw false;
+        } else {
+            return;
+        }
     }
 };
 
