@@ -57,7 +57,7 @@ apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 
 ```bash
-git clone https://github.com/Aqua200/Furina && cd Furina
+git clone https://github.com/Harvak-OFC/RAGNA && cd RAGNA
 ```
 
 ```bash
@@ -85,7 +85,7 @@ npm start
 ❒ Abre Termux y navega al directorio del bot:
    
    ```bash
-    cd Furina
+    cd RAGNA
    ```
 
 ❒ Inicia el bot nuevamente:
@@ -99,7 +99,7 @@ npm start
 > Si después de instalar el bot en Termux y iniciar la session del bot (deseas poner tu número es la lista de owner pon este comando:
 
    ```bash
-    cd Furina && nano settings.js
+    cd RAGNA && nano settings.js
    ```
 
 </details>
