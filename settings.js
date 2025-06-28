@@ -45,13 +45,13 @@ global.FurinaJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '˚୨୧⋆｡Furina˚୨୧⋆｡'
-global.botname = '˚୨୧⋆｡Furina˚୨୧⋆｡'
+global.packname = '˚୨୧⋆｡rᥲgᥒᥲ_ᑲ᥆𝗍˚୨୧⋆｡'
+global.botname = '˚୨୧⋆｡rᥲgᥒᥲ_ᑲ᥆𝗍-mძ˚୨୧⋆｡'
 global.wm = '⋆｡ Furina ｡⋆'
-global.author = '© 𝚖𝚊𝚍𝚎 𝚠𝚒𝚝𝚑 𝚋𝚢 ⁱᵃᵐ|Neykoor'
-global.dev = '© ⍴᥆ᥕᥱrᥱძ 𝚋𝚢 ⁱᵃᵐ|Neykoor'
-global.textbot = 'Furina, 𝚖𝚊𝚍𝚎 𝚠𝚒𝚝𝚑 𝚋𝚢 ⁱᵃᵐ|Neykoor'
-global.etiqueta = 'ⁱᵃᵐ|Neykoor'
+global.author = '© rᥲgᥒᥲ_ᑲ᥆𝗍-mძ|һᥲr᥎ᥲk'
+global.dev = '© ⍴᥆ᥕᥱrᥱძ ᑲᥡ һᥲr᥎ᥲk'
+global.textbot = 'rᥲgᥒᥲ_ᑲ᥆𝗍-mძ'
+global.etiqueta = 'һᥲr᥎ᥲk'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
