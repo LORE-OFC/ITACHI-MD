@@ -548,8 +548,8 @@ Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
           mentionedJid: [m.sender, userId],
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
-              newsletterJid: channelRD.id,
-              newsletterName: channelRD.name,
+              newsletterJid: false,
+              newsletterName: false,
               serverMessageId: -1,
           },
           forwardingScore: 999,
