@@ -29,15 +29,15 @@ console.log(`Error : ${e}`)
   
 global.creador = 'wa.me/5212202410659'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
-global.namechannel = '=͟͟͞❀ Fuerina - channel ⏤͟͟͞͞★'
-global.namechannel2 = '=͟͟͞❀ Furina  - channel ⏤͟͟͞͞★'
-global.namegrupo = 'ᰔᩚ Furina • ᥆𝖿іᥴіᥲᥣ ❀'
-global.namecomu = 'ᰔᩚ Furina • ᥴ᥆mᥙᥒі𝗍ᥡ ❀'
+global.namechannel = '=͟͟͞❀ ꜱᴛᴀʀʟɪɢʜᴛ - ᴄʀᴇᴡ  ⏤͟͟͞͞★'
+global.namechannel2 = '=͟͟͞❀ ꜱᴛᴀʀʟɪɢʜᴛ - ᴄʀᴇᴡ  ⏤͟͟͞͞★'
+global.namegrupo = '乂 ꜱᴛᴀʀʟɪɢʜᴛ ᴄʀᴇᴡ 𑇙💖ᰍ'
+global.namecomu = '乂 ꜱᴛᴀʀʟɪɢʜᴛ ᴄʀᴇᴡ 𑇙💖ᰍ'
 global.listo = '❀ *Aquí tienes ฅ^•ﻌ•^ฅ*'
 global.fotoperfil = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1745522645448.jpeg')
 
-global.canalIdM = ["120363392571425662@newsletter", "120363392571425662@newsletter"]
-global.canalNombreM = ["ᰔᩚ Furina-mძ • ᥙ⍴ძᥲ𝗍ᥱs ❀", "ᰔᩚ Furina-mძ • ᥲ᥎іs᥆s ❀"]
+global.canalIdM = ["120363420017244077@newsletter", "120363420017244077@newsletter"]
+global.canalNombreM = ["ᰔᩚ rᥲgᥒᥲ_ᑲ᥆𝗍-mძ ❀", "ᰔᩚ rᥲgᥒᥲ_ᑲ᥆𝗍-mძ ❀"]
 global.channelRD = await getRandomChannel()
 
 global.d = new Date(new Date + 3600000)
