@@ -1,6 +1,6 @@
 <h1 align="center">˚୨୧⋆｡RAGNA˚୨୧⋆｡</h1>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00BFFF&lines=Bienvenido(a)+a+mi+repositorio;disfruta+de+Ragna+dev+Neykoor)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=00BFFF&lines=Bienvenido(a)+a+mi+repositorio;disfruta+de+Ragna+dev+Harvak)](https://git.io/typing-svg)
 
  <img src= "https://files.catbox.moe/u88993.jpg">
     </p>
