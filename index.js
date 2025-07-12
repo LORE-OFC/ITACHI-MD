@@ -42,13 +42,13 @@ let { say } = cfonts
 console.log(chalk.hex('#8A2BE2').bold(`\n✰ Iniciando Furina ✰\n`))
 
 
-say('Furina', {
+say('ainz', {
   font: 'block',
   align: 'center',
   colors: ['cyanBright']
 })
 
-say(`Developed By • Neykoor`, {
+say(`Developed By • lore`, {
 font: 'console',
 align: 'center',
 colors: ['blueBright']
